@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/subtract"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/background_entry" />
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="10dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/back"
+        android:padding="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right">
+
+        <Button
+            android:id="@+id/skip"
+            android:layout_width="95dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@null"
+            android:text="@string/skip"
+            android:fontFamily="@style/MyTextView"
+            android:textColor="#2B2B2B"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/logo_app"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/logo"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="15dp"
+            />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Зарегистрируйтесь"
+            android:gravity="center"
+            android:textColor="#5B78EB"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_marginBottom="7dp">
+
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/enter_login"
+            android:textColorHint="#5B78EB"
+            android:theme="@style/EditTextThemeOverlay">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#5B78EB"
+                android:id="@+id/login_registration"
+                android:hint="Логин"
+                android:autofillHints="username"
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/enter_email"
+            android:textColorHint="#5B78EB"
+            android:theme="@style/EditTextThemeOverlay"
+            android:fontFamily="@style/MyTextView">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#5B78EB"
+                android:id="@+id/email_registration"
+                android:hint="Электронная почта"
+                android:autofillHints="password"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/enter_password"
+            android:textColorHint="#5B78EB"
+            android:theme="@style/EditTextThemeOverlay"
+            android:fontFamily="@style/MyTextView">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#5B78EB"
+                android:id="@+id/password_registration"
+                android:hint="Пароль"
+                android:autofillHints="password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/enter_password_repeat"
+            android:textColorHint="#5B78EB"
+            android:theme="@style/EditTextThemeOverlay"
+            android:fontFamily="@style/MyTextView">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#5B78EB"
+                android:id="@+id/password_repeat_registration"
+                android:hint="Повторите пароль"
+                android:autofillHints="password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:background="@drawable/enter_button"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="7dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|bottom"
+        android:layout_marginBottom="30dp">
+        <Button
+            android:id="@+id/log_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already_have_account_enter"
+            android:textSize="12sp"
+            android:textColor="#5A5A5A"
+            android:background="@null"
+            >
+        </Button>
+
+    </LinearLayout>
+</RelativeLayout>

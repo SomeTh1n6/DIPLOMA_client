@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.articles.ArticlesFragment">
+
+    <!-- TODO Запретить повороты экрана для всех активити -->
+    <View
+        android:id="@+id/subtract"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:background="@drawable/background_main"
+        tools:ignore="MissingConstraints"
+        />
+
+    <!-- Навигатор для современных родителей -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="294dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|top"
+            android:text="@string/app_name"
+            android:textStyle="bold"
+            android:textAppearance="@style/app_name"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/logo"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:background="@drawable/logo_second"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Мы поможем Вам..."
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:textColor="#5B78EB">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/article_start_page"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:textColor="#485EB8"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+        </TextView>
+
+        <Button
+            android:id="@+id/choose_age_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выбрать возраст"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:background="@drawable/main_design_button"
+            android:layout_marginTop="20dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:layout_marginBottom="7dp">
+
+        </Button>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

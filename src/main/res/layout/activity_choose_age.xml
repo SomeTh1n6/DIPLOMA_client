@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChooseAgeActivity">
+
+    <View
+        android:id="@+id/subtract"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/background_main"
+        tools:ignore="MissingConstraints"
+        />
+    <ImageButton
+        android:layout_margin="30dp"
+        android:id="@+id/back_choose_age"
+        android:layout_width="10dp"
+        android:layout_height="18dp"
+        android:background="@drawable/back" />
+
+    <!-- Навигатор для современных родителей -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="294dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|top"
+            android:text="@string/app_name"
+            android:textStyle="bold"
+            android:textAppearance="@style/app_name"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/logo"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:background="@drawable/logo_third"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="15dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_age_page"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#5B78EB">
+        </TextView>
+
+
+        <Spinner
+            android:id="@+id/choose_age_spinner"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            style="@style/spinner_style">
+
+        </Spinner>
+
+
+        <Button
+            android:id="@+id/choose_age_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/main_design_button"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:text="Подтвердить"
+            android:textColor="@color/white"
+            android:textSize="20sp">
+
+        </Button>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
