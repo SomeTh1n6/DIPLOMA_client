@@ -26,15 +26,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".ArticlesScrollingActivity"
-            android:exported="false"
-            android:label="@string/title_activity_articles_scrolling"
-            android:theme="@style/Theme.Navigatorforparentsapp.NoActionBar">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name=".SectionsAgeActivity"
             android:exported="false"
@@ -61,20 +53,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".RegisterActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".EntryActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -86,6 +64,11 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
+        </activity>
+
+        <activity
+            android:name=".ChatActivity"
+            android:exported="true">
         </activity>
     </application>
 

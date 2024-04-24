@@ -16,7 +16,9 @@
     <string name="nav_header_title">Навигатор для современных родителей</string>
     <string name="nav_header_subtitle">tiptop73@mail.ru</string>
 
+    <string name="next">Продолжить</string>
 
+    <string name="chat"><u>Чат</u></string>
     <string name="menu_account"><u>Аккаунт</u></string>
     <string name="menu_articles"><u>Статьи</u></string>
     <string name="menu_note"><u>Запись к специалисту</u></string>

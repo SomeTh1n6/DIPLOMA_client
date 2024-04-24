@@ -7,12 +7,12 @@ plugins {
 android {
     namespace 'ru.itmo.navigator_for_parents_app'
     namespace 'ru.itmo.navigator_for_parents_app'
-    compileSdk 32
+    compileSdk 34
 
     defaultConfig {
         applicationId "ru.itmo.navigator_for_parents_app"
         minSdk 24
-        targetSdk 32
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -38,6 +38,9 @@ android {
 }
 
 dependencies {
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'

@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/nav_account"
         android:name="ru.itmo.navigator_for_parents_app.ui.account.AccountFragment"
-        android:label="@string/menu_account"
+        android:label="@string/chat"
         tools:layout="@layout/fragment_account" />
 
     <fragment
