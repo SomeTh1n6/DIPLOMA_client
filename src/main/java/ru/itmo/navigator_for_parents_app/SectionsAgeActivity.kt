@@ -15,10 +15,12 @@ class SectionsAgeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        val selectedAge=intent.getStringExtra("selectedAge")
         binding = ActivitySectionsAgeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val selectedAgeTV = findViewById<TextView>(R.id.selected_age_sections)
+        selectedAgeTV.text = "$selectedAge лет"
         val backButton = findViewById<ImageButton>(R.id.back_button_section)
         val importantBut = findViewById<TextView>(R.id.important)
         val ageBut = findViewById<TextView>(R.id.age_articles)

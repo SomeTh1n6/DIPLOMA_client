@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Spinner
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import ru.itmo.navigator_for_parents_app.ui.articles.ArticlesFragment
 
@@ -34,9 +35,17 @@ class ChooseAgeActivity : AppCompatActivity() {
         val nextBut : Button = findViewById(R.id.choose_age_next)
 
         nextBut.setOnClickListener{
-            val intent = Intent(this, SectionsAgeActivity::class.java)
-            startActivity(intent) // выход на регистрацию
-            finish()
+            val selectedAge = spinner.selectedItem.toString()
+            if (selectedAge == "Выберите возраст"){
+                val toast = Toast.makeText(this, "Выберите желаемый возраст", Toast.LENGTH_SHORT)
+                toast.show()
+            }
+            else{
+                val intent = Intent(this, SectionsAgeActivity::class.java)
+                intent.putExtra("selectedAge", selectedAge)
+                startActivity(intent) // выход на регистрацию
+                finish()
+            }
         }
 
         val backButton : ImageButton = findViewById(R.id.back_choose_age)
