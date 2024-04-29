@@ -17,15 +17,4 @@
         android:label="@string/menu_articles"
         tools:layout="@layout/fragment_article" />
 
-    <fragment
-        android:id="@+id/nav_note"
-        android:name="ru.itmo.navigator_for_parents_app.ui.note.NoteFragment"
-        android:label="@string/menu_note"
-        tools:layout="@layout/fragment_note" />
-
-    <fragment
-        android:id="@+id/nav_our_notes"
-        android:name="ru.itmo.navigator_for_parents_app.ui.notes.NotesFragment"
-        android:label="@string/menu_our_note"
-        tools:layout="@layout/fragment_our_notes" />
 </navigation>

@@ -12,7 +12,6 @@ import ru.itmo.navigator_for_parents_app.R
 import ru.itmo.navigator_for_parents_app.SectionsAgeActivity
 import ru.itmo.navigator_for_parents_app.adapter.data.Articles
 import ru.itmo.navigator_for_parents_app.adapter.data_notes.Notes
-import ru.itmo.navigator_for_parents_app.ui.notes.NotesFragment
 
 class AdapterArticles(
     private val context: Context,
