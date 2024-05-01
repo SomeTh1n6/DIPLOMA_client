@@ -13,7 +13,6 @@ import ru.itmo.navigator_for_parents_app.ui.articles.ArticlesFragment
 
 
 class ChooseAgeActivity : AppCompatActivity() {
-    @SuppressLint("ResourceType", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose_age)

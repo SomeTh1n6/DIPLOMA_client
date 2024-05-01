@@ -13,9 +13,10 @@ import ru.itmo.navigator_for_parents_app.SectionsAgeActivity
 import ru.itmo.navigator_for_parents_app.adapter.data.Articles
 import ru.itmo.navigator_for_parents_app.adapter.data_notes.Notes
 
-class AdapterArticles(
+class AdapterArticles   (
     private val context: Context,
-    private val articles: List<Articles>
+    private val articles: List<Articles>,
+    private val age: String
 ) : RecyclerView.Adapter<AdapterArticles.ViewHolder> (){
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
@@ -31,9 +32,10 @@ class AdapterArticles(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(getItem(position))
         holder.itemView.setOnClickListener{
-            context.startActivity(
-                Intent(context, ArticleActivity::class.java).putExtra("position",position),
-            )
+            val intent = Intent(context, ArticleActivity::class.java)
+            intent.putExtra("position", position)
+            intent.putExtra("age", age) // Add another putExtra here
+            context.startActivity(intent)
         }
     }
 

@@ -12,11 +12,13 @@ class ArticleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_article)
+        val age = intent.getStringExtra("age")
 
         val backButton : ImageButton = findViewById(R.id.back_article)
 
         backButton.setOnClickListener{
             val intent = Intent(this, SectionsAgeActivity::class.java)
+            intent.putExtra("age", age)
             startActivity(intent) // как гость
             finish()
         }
