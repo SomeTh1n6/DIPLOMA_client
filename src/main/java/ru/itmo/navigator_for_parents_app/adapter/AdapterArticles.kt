@@ -34,7 +34,9 @@ class AdapterArticles   (
         holder.itemView.setOnClickListener{
             val intent = Intent(context, ArticleActivity::class.java)
             intent.putExtra("position", position)
-            intent.putExtra("age", age) // Add another putExtra here
+            intent.putExtra("age", age)
+            intent.putExtra("name", getItem(position).title)
+            intent.putExtra("content", getItem(position).content)
             context.startActivity(intent)
         }
     }
