@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ChatActivity"
+    android:background="#ECECEC"
+    android:gravity="bottom">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#5B78EB"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_marginStart="20dp"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:background="@drawable/arrow_back">
+        </ImageButton>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:text="Чат"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textAppearance="@style/app_name"
+            android:textStyle="bold"
+            >
+
+        </TextView>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/chatListView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:clipToPadding="false"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:minHeight="50dp"
+        android:background="@color/white"
+        android:padding="5dp">
+
+
+        <EditText
+            android:id="@+id/messageEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Напишите свое сообщение"/>
+
+        <ImageButton
+            android:id="@+id/sendButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/ic_send_foreground"
+            android:text="Отправить" />
+
+    </LinearLayout>
+</LinearLayout>
