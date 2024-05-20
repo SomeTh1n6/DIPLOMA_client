@@ -28,14 +28,13 @@ class SectionsAgeActivity : AppCompatActivity() {
             selectedAgeTV.text = "$selectedAge лет"
         }
         val backButton = findViewById<ImageButton>(R.id.back_button_section)
-        val importantBut = findViewById<TextView>(R.id.important)
-        val ageBut = findViewById<TextView>(R.id.age_articles)
-        val crisisBut = findViewById<TextView>(R.id.crisis_articles)
 
-        val importantAgeBut = findViewById<TextView>(R.id.importantAge)
-        val childRoomBut = findViewById<TextView>(R.id.childRoom)
-        val gamesBut = findViewById<TextView>(R.id.games)
-        val oftenQuestionsBut = findViewById<TextView>(R.id.oftenQuestions)
+        val importantBut = findViewById<TextView>(R.id.important)
+        val ageBut = findViewById<TextView>(R.id.ages)
+        val crisisBut = findViewById<TextView>(R.id.crises)
+        val leadingBut = findViewById<TextView>(R.id.leading_activity)
+        val physicalBut = findViewById<TextView>(R.id.physical)
+        val gamesBut = findViewById<TextView>(R.id.game)
 
         backButton.setOnClickListener {
             val intent = Intent(this, ChooseAgeActivity::class.java)
@@ -67,17 +66,17 @@ class SectionsAgeActivity : AppCompatActivity() {
             finish()
         }
 
-        importantAgeBut.setOnClickListener {
+        leadingBut.setOnClickListener {
             val intent = Intent(this, ListArticleActivity::class.java)
-            intent.putExtra("name","importantAge")
+            intent.putExtra("name","leading")
             intent.putExtra("age",selectedAge)
             startActivity(intent)
             finish()
         }
 
-        childRoomBut.setOnClickListener {
+        physicalBut.setOnClickListener {
             val intent = Intent(this, ListArticleActivity::class.java)
-            intent.putExtra("name","childRoom")
+            intent.putExtra("name","physical")
             intent.putExtra("age",selectedAge)
             startActivity(intent)
             finish()
@@ -85,18 +84,11 @@ class SectionsAgeActivity : AppCompatActivity() {
 
         gamesBut.setOnClickListener {
             val intent = Intent(this, ListArticleActivity::class.java)
-            intent.putExtra("name","games")
+            intent.putExtra("name","game")
             intent.putExtra("age",selectedAge)
             startActivity(intent)
             finish()
         }
 
-        oftenQuestionsBut.setOnClickListener {
-            val intent = Intent(this, ListArticleActivity::class.java)
-            intent.putExtra("name","oftenQuestions")
-            intent.putExtra("age",selectedAge)
-            startActivity(intent)
-            finish()
-        }
     }
 }

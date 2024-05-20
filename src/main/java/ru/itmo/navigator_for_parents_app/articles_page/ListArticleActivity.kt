@@ -17,14 +17,14 @@ import ru.itmo.navigator_for_parents_app.adapter.data.Articles
 class ListArticleActivity : AppCompatActivity() {
 
     private var adapter: AdapterArticles? = null
-    private var articles: List<Articles>? = null
+
+    private var leading: List<Articles>? = null
     private var ages: List<Articles>? = null
     private var crisis: List<Articles>? = null
 
-    private var importantAge: List<Articles>? = null
-    private var childRoom: List<Articles>? = null
-    private var oftenQuestions: List<Articles>? = null
-    private var games: List<Articles>? = null
+    private var important: List<Articles>? = null
+    private var physical: List<Articles>? = null
+    private var game: List<Articles>? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_article)
@@ -38,51 +38,43 @@ class ListArticleActivity : AppCompatActivity() {
 
         when (age){
             "0-3" -> {
-                articles = DataStorage.getArticleImportantList()
+                important = DataStorage.getArticleImportantList()
                 ages = DataStorage.getArticleAgeList()
                 crisis = DataStorage.getArticleCrisisList()
-
-                importantAge = DataStorage.getArticleImportantAgeList()
-                childRoom = DataStorage.getArticleChildRoomList()
-                oftenQuestions = DataStorage.getArticleOftenQuestionsList()
-                games = DataStorage.getArticleGamesList()
+                leading = DataStorage.getArticleLeadingList()
+                physical = DataStorage.getArticlePhysicalList()
+                game = DataStorage.getArticleGamesList()
             }
             "4-7" -> {
-                articles = DataStorage.getArticleImportantList1()
+                important = DataStorage.getArticleImportantList1()
                 ages = DataStorage.getArticleAgeList1()
                 crisis = DataStorage.getArticleCrisisList1()
-
-                importantAge = DataStorage.getArticleImportantAgeList1()
-                childRoom = DataStorage.getArticleChildRoomList1()
-                oftenQuestions = DataStorage.getArticleOftenQuestionsList1()
-                games = DataStorage.getArticleGamesList1()
+                leading = DataStorage.getArticleLeadingList1()
+                physical = DataStorage.getArticlePhysicalList1()
+                game = DataStorage.getArticleGamesList1()
             }
             "8-12" -> {
-                articles = DataStorage.getArticleImportantList2()
+                important = DataStorage.getArticleImportantList2()
                 ages = DataStorage.getArticleAgeList2()
                 crisis = DataStorage.getArticleCrisisList2()
-
-                importantAge = DataStorage.getArticleImportantAgeList2()
-                childRoom = DataStorage.getArticleChildRoomList2()
-                oftenQuestions = DataStorage.getArticleOftenQuestionsList2()
-                games = DataStorage.getArticleGamesList2()
+                leading = DataStorage.getArticleLeadingList2()
+                physical = DataStorage.getArticlePhysicalList2()
+                game = DataStorage.getArticleGamesList2()
             }
             "13-17" -> {
-                articles = DataStorage.getArticleImportantList3()
+                important = DataStorage.getArticleImportantList3()
                 ages = DataStorage.getArticleAgeList3()
                 crisis = DataStorage.getArticleCrisisList3()
-
-                importantAge = DataStorage.getArticleImportantAgeList3()
-                childRoom = DataStorage.getArticleChildRoomList3()
-                oftenQuestions = DataStorage.getArticleOftenQuestionsList3()
-                games = DataStorage.getArticleGamesList3()
+                leading = DataStorage.getArticleLeadingList3()
+                physical = DataStorage.getArticlePhysicalList3()
+                game = DataStorage.getArticleGamesList3()
             }
         }
 
 
         if (name == "important"){
-            adapter = AdapterArticles(this, articles!!, age!!)
-            header.text = "Важно"
+            adapter = AdapterArticles(this, important!!, age!!)
+            header.text = "Важно знать"
         }
         else if(name == "age"){
             adapter = AdapterArticles(this, ages!!, age!!)
@@ -92,21 +84,17 @@ class ListArticleActivity : AppCompatActivity() {
             adapter = AdapterArticles(this, crisis!!, age!!)
             header.text = "Кризисы"
         }
-        else if(name == "importantAge"){
-            adapter = AdapterArticles(this, importantAge!!, age!!)
-            header.text = "Важно в этом возрасте"
+        else if(name == "physical"){
+            adapter = AdapterArticles(this, physical!!, age!!)
+            header.text = "Физическое развитие"
         }
-        else if(name == "childRoom"){
-            adapter = AdapterArticles(this, childRoom!!, age!!)
-            header.text = "Детская комната"
+        else if(name == "game"){
+            adapter = AdapterArticles(this, game!!, age!!)
+            header.text = "Игры,  игрушки, увлечения"
         }
-        else if(name == "oftenQuestions"){
-            adapter = AdapterArticles(this, oftenQuestions!!, age!!)
-            header.text = "Частые вопросы"
-        }
-        else if(name == "games"){
-            adapter = AdapterArticles(this, games!!, age!!)
-            header.text = "Игры и занятия"
+        else if(name == "leading"){
+            adapter = AdapterArticles(this, leading!!, age!!)
+            header.text = "Ведущая деятельность"
         }
 
         val list = findViewById<RecyclerView>(R.id.articleList)

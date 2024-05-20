@@ -49,6 +49,22 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/leading_activity"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:background="@drawable/border_sections"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="Ведущая деятельность"
+                android:textColor="#485EB8"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp">
+
+            </TextView>
+
+            <TextView
                 android:id="@+id/important"
                 android:layout_width="150dp"
                 android:layout_height="80dp"
@@ -57,7 +73,7 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:padding="20dp"
-                android:text="Важно!"
+                android:text="Важно знать"
                 android:textColor="#485EB8"
                 android:textStyle="bold"
                 android:layout_marginBottom="20dp">
@@ -65,23 +81,7 @@
             </TextView>
 
             <TextView
-                android:id="@+id/crisis_articles"
-                android:layout_width="150dp"
-                android:layout_height="80dp"
-                android:background="@drawable/border_sections"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:padding="20dp"
-                android:text="Кризисы"
-                android:textColor="#485EB8"
-                android:textStyle="bold"
-                android:layout_marginBottom="20dp">
-
-            </TextView>
-
-            <TextView
-            android:id="@+id/importantAge"
+            android:id="@+id/game"
             android:layout_width="150dp"
             android:layout_height="80dp"
             android:background="@drawable/border_sections"
@@ -89,24 +89,11 @@
             android:focusable="true"
             android:gravity="center"
             android:padding="20dp"
-            android:text="Важно в этом возрасте"
+            android:text="Игры,  игрушки, увлечения"
             android:textColor="#485EB8"
             android:textStyle="bold"
             android:layout_marginBottom="20dp">
 
-        </TextView><TextView
-            android:id="@+id/oftenQuestions"
-            android:layout_width="150dp"
-            android:layout_height="80dp"
-            android:background="@drawable/border_sections"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
-            android:padding="20dp"
-            android:text="Частые вопросы"
-            android:textColor="#485EB8"
-            android:textStyle="bold"
-            android:layout_marginBottom="20dp">
 
         </TextView>
 
@@ -119,7 +106,23 @@
             android:layout_marginStart="20dp">
 
             <TextView
-                android:id="@+id/age_articles"
+                android:id="@+id/physical"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:background="@drawable/border_sections"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="Физическое развитие"
+                android:textColor="#485EB8"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/ages"
                 android:layout_width="150dp"
                 android:layout_height="80dp"
                 android:background="@drawable/border_sections"
@@ -135,7 +138,7 @@
             </TextView>
 
             <TextView
-                android:id="@+id/games"
+                android:id="@+id/crises"
                 android:layout_width="150dp"
                 android:layout_height="80dp"
                 android:background="@drawable/border_sections"
@@ -143,23 +146,7 @@
                 android:focusable="true"
                 android:gravity="center"
                 android:padding="20dp"
-                android:text="Игры и занятия"
-                android:textColor="#485EB8"
-                android:textStyle="bold"
-                android:layout_marginBottom="20dp">
-
-            </TextView>
-
-            <TextView
-                android:id="@+id/childRoom"
-                android:layout_width="150dp"
-                android:layout_height="80dp"
-                android:background="@drawable/border_sections"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:padding="20dp"
-                android:text="Детская комната"
+                android:text="Кризисы"
                 android:textColor="#485EB8"
                 android:textStyle="bold"
                 android:layout_marginBottom="20dp">
